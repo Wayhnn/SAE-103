@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="1A21">
+    <style>
+        body>header {
+            height: 100vh;
+            width: 100%;
+
+            border: 1px solid black;
+            border-radius: 25px;
+            height: 98vh;
+            width: 100%;
+            display: flex;
+            flex-direction :column ;
+            justify-content: center;
+            align-items: center;
+        }
+
+        section {
+            height: 98vh;
+        }
+        
+        p>code {
+            background-color: rgb(60, 60, 60);
+            color: rgb(255, 190, 137);
+            display: inline-block;
+            padding: 2px;
+            border-radius: 5px;
+        }
+
+        pre>code {
+            background-color: rgb(60, 60, 60);
+            color: rgb(255, 190, 137);
+            display: inline-block;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        pre>code>span {
+            background-color: rgb(60, 60, 60);
+            color: rgb(137, 192, 255);
+            display: inline-block;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        
+        main>h2,
+        article>h2,
+        section>h2,
+        main>header>h2 {
+            border-bottom: 1px solid black;
+        }
+
+        table, td,th {
+            border: 1px solid #000;
+            border-collapse: collapse;
+            padding : 5px;
+        }
+
+        [class *="bold"] {
+            font-weight: bold;
+        }
+
+        [class *="italic"] {
+            font-style: italic;
+        }
+    </style>
+    <title>Documentation Utilisateur</title>
+</head>
+
+<body>
+    <header>
+        <h1>
+			Machine à courber les bananes
+        </h1>
+        <h2>
+			Les Génies du Ponant
+        </h2>
+        <h3>
+			Version 2.7.4 - 18/01/2024        </h3>
+    </header>
+    <main>
+<h1>   Documentation utilisateur
+ </h1> 
+        <section>
+<h2>    Liste
+ </h2><h3>     Liste non ordonnée
+ </h3>            <ul>
+                <li>
+Elt 1                </li>
+                <li>
+Elt 2                </li>
+            </ul>
+ 
+        </section>
+ 
+        <section>
+<h2>    Tableau
+ </h2>            <table>
+                <tr>
+                    <th>  Tableau  </th>
+                    <th>  à    </th>
+                    <th>  quatre   </th>
+                    <th>  colonnes     </th>
+                </tr>
+                <tr>
+                    <td>  avec     </td>
+                    <td>  des  </td>
+                    <td>  valeurs  </td>
+                    <td>  différentes  </td>
+                </tr>
+            </table>
+ 
+        </section>
+ 
+        <section>
+<h2>    Code
+ </h2><h3>     Bloc de code
+ </h3>            <code><pre>
+int main() {
+        vecteur vInitial = {35,25,20,20};
+        matrice mEvolution = {{0.9 , 0.06 , 0.08 , 0.05},
+                              {0.03, 0.8  , 0.02 , 0.03},
+                              {0.02, 0.03 , 0.75 , 0.04},
+                              {0.05, 0.11 , 0.15 , 0.88}};
+        vecteur vResultat;
+    
+        afficherVecteur(vInitial,4);
+    
+        afficherMatrice(mEvolution,4);
+    
+        for(int i = 0; i != 30 ; i++){
+            afficherVecteur(vResultat,4);
+            copiervecteur(vInitial,vResultat,4);
+            produitVectMat(vResultat,mEvolution,vResultat,4);
+        }
+
+        return EXIT_SUCCESS;
+}
+            </code></pre>
+<h3>     Code en ligne
+ </h3>            <p>     Ce `Code` est du code.
+ </p>
+ 
+        </section>
+ 
+        <section>
+<h2>    Lien
+ </h2>
+<a href="#Liste">lien vers le titre Liste</a>
+ 
+        </section>
+ 
+        <section>
+<h2>    Texte
+ </h2>            <p>     Lorem ipsumdolor sit amet, consectetur adipiscing elit. 
+ </p>
+<h3>     Décoration de texte
+ </h3><h4>      Gras
+ </h4>            <p>     Ce <span class="bold">texte</span> est en gras
+ </p>
+<h4>      Italique
+ </h4>            <p>     Ce <span class="italic">texte</span> est en italique
+ </p>
+        </section>
+    </main>
+</body>
+
+</html>
